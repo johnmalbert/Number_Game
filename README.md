@@ -1,0 +1,3 @@
+"# Number_Game" 
+To run, activate Django Environment...
+Navigate to manage.py folder, type "python manage.py runserver" in terminal.

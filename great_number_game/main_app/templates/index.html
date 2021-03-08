@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=0, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://use.fontawesome.com/fe0b1ed089.js"></script>
+    {% load static %}	
+    <title>The Great Counter Dilemma</title>
+    <style>
+        img{
+            border: 10px solid gray;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar navbar-dark bg-dark box-shadow">
+            <div class="container d-flex justify-content-between text-muted">
+                <h3>The Great Number Game</h3>
+                <a href="/restart"><button class="btn btn-light btn-lg">Restart Game</button></a>
+            </div>
+        </div>
+    </header>
+    <main>
+    <div class="container-fluid text-center bg-muted p-5">
+        <div class="row">
+            <div class="col">
+                <img src="{% static 'DSC_4893.JPG' %}" alt="my image">
+            </div>
+            <div class="col mt-5">
+                <h1>Guess My Number</h1>
+                <h1>Between 1 and 100</h1>
+                <form action="/guess" method="post">
+                    {% csrf_token %}
+                    <label for="guess">Your Guess</label>
+                    <input type="number" name="user_guess" id="">
+                    <button class= "btn-primary mt-5" type="submit">Enter</button>
+                </form>
+            </div>
+            <div class="col">
+                <img src="{% static 'DSC_2171.JPG' %}" alt="my image">
+            </div>
+        </div>
+        
+    </div>
+    </main>
+        <div class="container-fluid p-3  bg-dark text-center text-muted">
+            <h3>Created by John Albert, 2021</h3>
+            <p>Images by @ChaseTheAlberts <a href="https://www.instagram.com/chasethealberts"><i class="fa fa-instagram" aria-hidden="true"></i></a></p>
+        </div>
+</body>
+</html>

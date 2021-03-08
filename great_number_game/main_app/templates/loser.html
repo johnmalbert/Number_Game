@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=0, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://use.fontawesome.com/fe0b1ed089.js"></script>
+    {% load static %}	
+    <title>The Great Counter Dilemma</title>
+    <style>
+        img{
+            border: 10px solid red;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar navbar-dark bg-dark box-shadow">
+            <div class="container d-flex justify-content-between text-muted">
+                <h3>The Great Number Game</h3>
+                <a href="/restart"><button class="btn btn-light btn-lg">Restart Game</button></a>
+            </div>
+        </div>
+    </header>
+    <main>
+    <div class="container-fluid text-center bg-muted p-5">
+        <div class="row">
+            <div class="col">
+                <img src="{% static 'DSC_4893.JPG' %}" alt="my image">
+            </div>
+            <div class="col mt-5">
+                <h1>THAT WAS YOUR SIXTH ATTEMPT!</h1>
+                <h2>YOU LOSE</h2>
+                <h2>The Number was {{answer}}</h2>
+                <a href="/restart"><button class="btn btn-success btn-lg mt-5">Play Again</button></a>                
+            </div>
+            <div class="col">
+                <img src="{% static 'DSC_2171.JPG' %}" alt="my image">
+            </div>
+        </div>
+        
+    </div>
+    </main>
+        <div class="container-fluid p-3  bg-dark text-center text-muted">
+            <h3>Created by John Albert, 2021</h3>
+            <p>Images by @ChaseTheAlberts <a href="https://www.instagram.com/chasethealberts"><i class="fa fa-instagram" aria-hidden="true"></i></a></p>
+        </div>
+</body>
+</html>
